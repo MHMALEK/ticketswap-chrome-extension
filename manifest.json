@@ -3,7 +3,14 @@
   "version": "1.0",
   "description": "This extension help you to do the checkout flow in ticketswap.com faster",
   "manifest_version": 3,
-  "permissions": ["storage", "activeTab", "scripting", "tabs", "background", "webNavigation"],
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting",
+    "tabs",
+    "background",
+    "webNavigation"
+  ],
   "content_scripts": [
     {
       "all_frames": true,
@@ -14,5 +21,9 @@
   ],
   "background": {
     "service_worker": "background.js"
-  }
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "options_page": "options.html"
 }
